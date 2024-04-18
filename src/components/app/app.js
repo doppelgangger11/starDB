@@ -65,22 +65,19 @@ export default class App extends Component {
               <Header />
             </div>
           </div>
-
           <PersonDetails itemId={11} />
           <StarshipDetails itemId={5} />
           <PlanetDetails itemId={9} />
 
-          <PersonList>{({ name }) => <span>{name}</span>}</PersonList>
-
-          <StarshipList>{({ name }) => <span>{name}</span>}</StarshipList>
-
-          <PlanetList>{({ name }) => <span>{name}</span>}</PlanetList>
+          <PersonList />
+          <StarshipList />
+          <PlanetList />
 
           {/*<ItemList
-                        getData={getAllPlanets}
-                        onItemSelected={() => {}}>
-                        { ({name}) => <span>{name}</span> }
-                    </ItemList>*/}
+                      getData={getAllPlanets}
+                      onItemSelected={() => {}}>
+                      { ({name}) => <span>{name}</span> }
+                  </ItemList>*/}
         </div>
       </ErrorBoundry>
     );
