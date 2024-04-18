@@ -1,16 +1,21 @@
 import os
-name = input("enter name of component >>> ")
 
-list_of_components = [name + ".js", name + ".css", "index.js"]
+def create_folders_with_files(name: str):
 
-print(f"names is saved: {list_of_components}")
+    list_of_components = [name + ".js", name + ".css", "index.js"]
 
-os.makedirs(os.path.dirname(f"./{name}/"), exist_ok=True)
+    print(f"names is saved: {list_of_components}")
 
-for component in list_of_components:
-    file_path = f"./{name}/{component}"
-    
-    with open(file_path, "w") as file:
-        pass
+    os.makedirs(os.path.dirname(f"./{name}/"), exist_ok=True)
 
-    print(f"{file_path} file is created")
+    for component in list_of_components:
+        file_path = f"./{name}/{component}"
+        
+        with open(file_path, "w") as file:
+            pass
+
+        print(f"{file_path} file is created")
+
+if __name__ == "__main__":
+    name = input("enter name of component >>> ")
+    create_folders_with_files(name=name)
