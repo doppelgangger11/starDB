@@ -8,10 +8,8 @@ import PeoplePage from "../people-page";
 import ItemList from "../item-list";
 import PersonDetails from "../person-details";
 import SwapiService from "../../services/swapi-service";
-
 export default class App extends Component {
   swapiService = new SwapiService();
-
   state = {
     showRandomPlanet: true,
     hasError: false,
@@ -44,7 +42,7 @@ export default class App extends Component {
         </div>
         <PeoplePage />
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-6">
             <ItemList
               onItemSelected={this.onPersonSelected}
@@ -71,7 +69,7 @@ export default class App extends Component {
           <div className="col-md-6">
             <PersonDetails personId={this.state.selectedPerson} />
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
